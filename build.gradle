@@ -30,6 +30,7 @@ apply plugin: "maven"
 repositories {
 	mavenLocal()
 	mavenCentral()
+	maven { url "https://oss.sonatype.org/content/repositories/releases/" }
 }
 	
 group = 'org.mini2Dx'
@@ -72,7 +73,7 @@ if(libGdxDirectory.exists()) {
 
 task checkoutLibGdxTag(type: Exec, dependsOn: fetchLatestLibGdxTags) {
 	workingDir './libgdx'
-	commandLine 'git', 'checkout', "$libgdxVersion"
+	commandLine 'git', 'checkout', "gdx-parent-$libgdxVersion"
 }
 
 task copyLicenseFiles(type: Copy, dependsOn: checkoutLibGdxTag) {

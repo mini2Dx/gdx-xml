@@ -10,7 +10,7 @@ Usage
 ----------------------
 
 ```gradle
-compile "org.mini2Dx:gdx-xml:1.9.10"
+compile "org.mini2Dx:gdx-xml:1.9.11"
 ```
 
 This project's only dependency is [gdx-collections](https://github.com/mini2Dx/gdx-collections).
